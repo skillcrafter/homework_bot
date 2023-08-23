@@ -51,7 +51,7 @@ def check_tokens():
 
 
 def send_message(bot: telegram.Bot, message):
-    """Oтправляет сообщение в Telegram чат"""
+    """Oтправляет сообщение в Telegram чат."""
     try:
         bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
         logging.debug(f'Вам отправлено сообщение! {message}')
@@ -61,7 +61,7 @@ def send_message(bot: telegram.Bot, message):
 
 
 def get_api_answer(timestamp):
-    """ Делает запрос к единственному эндпоинту API-сервиса"""
+    """Делает запрос к единственному эндпоинту API-сервиса."""
     try:
         params = {'from_date': timestamp}
         logging.info(f'Отправка запроса на {ENDPOINT} с параметрами {params}')
