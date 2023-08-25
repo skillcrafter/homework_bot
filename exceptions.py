@@ -1,6 +1,8 @@
 class CheckResponseError(Exception):
-    def __init__(self, text):
-        message = (
-            f'Проверка ответа API: {text}'
-        )
-        super().__init__(message)
+    """Проверка ответа API."""
+    pass
+
+
+class ApiRequestException(Exception):
+    """Исключение из-за ошибки GET-запроса к эндпоинту."""
+    pass
