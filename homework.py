@@ -69,7 +69,7 @@ def get_api_answer(timestamp):
         logging.info(f'Получен ответ {homework.json()}')
         if homework.status_code != HTTPStatus.OK:
             raise requests.RequestException()
-    except requests.RequestException as error:
+    except requests.RequestException:
         raise exceptions.ApiRequestException('Исключение из-за ошибки'
                                              ' GET-запроса к эндпоинту')
     return homework.json()
